@@ -9,7 +9,7 @@ int main(void)
 	int *p;
 
 	a[2] = 1024;
-	*p = &n;
+	p = &n;
 	/*
 	 * write your line of code here...
 	 * Remember:
