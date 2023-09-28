@@ -1,20 +1,24 @@
 #include "main.h"
 /**
  * flip_bits- returns the number of bits to flip
- * @n: first numb
- * @m: second numb
+ * @n: first number
+ * @m: second number
  *
- * Return: number of bit to fli[p
+ * Return: number of bits
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int temp = n ^ m;
-	unsigned int read = 0;
+	unsigned long int kelv;
+	unsigned long int rota;
 
-	if (temp > 0)
+	kelv = n ^ m;
+
+	for (rota = 0; kelv > 0;)
 	{
-		read += temp & 1;
-		temp >>= 1;
+		if ((kelv & 1) == 1)
+		rota++;
+
+		kelv = kelv >> 1;
 	}
-	return (read);
+	return (rota);
 }
